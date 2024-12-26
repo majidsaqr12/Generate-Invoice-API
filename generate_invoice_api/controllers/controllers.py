@@ -31,16 +31,16 @@ class InvoiceAPI(http.Controller):
             }
 
             # Extract and validate invoice data
-            invoice_lines = data.get('invoice_lines')
-            currency_id = data.get('currency_id')
-            total_amount_before_tax = data.get('total_amount_before_tax')
-            total_tax = data.get('total_tax')
-            total_discount = data.get('total_discount')
-            total_amount_after_tax = data.get('total_amount_after_tax')
-            total_payment = data.get('total_payment')
-            payment_reference = data.get('payment_reference')
-            invoice_date = data.get('invoice_date')
-            payment_method = data.get('payment_method')
+            invoice_lines = data.get('InvoiceLines')
+            currency_id = data.get('CurrencyCode')
+            total_amount_before_tax = data.get('TotalAmountBeforeTax')
+            total_tax = data.get('TotalTax')
+            total_discount = data.get('TotalDiscount')
+            total_amount_after_tax = data.get('TotalAmountAfterTax')
+            total_payment = data.get('TotalPayment')
+            payment_reference = data.get('PaymentReference')
+            invoice_date = data.get('InvoiceDate')
+            payment_method = data.get('PaymentMethod')
 
             # Validate mandatory fields
             if not customer_data["name"]:
